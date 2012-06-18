@@ -39,7 +39,7 @@ int infile_close(int fd);
 
 
 // End of a stream's in data
-inline Byte *zsend(rstate *rs) { return rs->z.next_in + rs->z.avail_in; }
+static inline Byte *zsend(rstate *rs) { return rs->z.next_in + rs->z.avail_in; }
 
 // Return zero on success.
 int rsread(rstate *rs, Byte *start);
