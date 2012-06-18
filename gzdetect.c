@@ -301,7 +301,7 @@ int gzlist(size_t idx, rstate *rs) {
 	char name[NAMELEN];
 	if (gzinit(rs, name, NAMELEN))
 		return 1;
-	fprintf(stderr, "%2d: %#010llx  %s\n", idx, (unsigned long long)off, name);
+	fprintf(stderr, "%2zu: %#010llx  %s\n", idx, (unsigned long long)off, name);
 	return 0;
 }
 
